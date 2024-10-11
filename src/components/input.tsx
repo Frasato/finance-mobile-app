@@ -3,15 +3,16 @@ import { TextInput, View, StyleSheet } from "react-native";
 import { InputProps } from "../@types/inputProps";
 import * as colors from "../constants/colors";
 
-export default function InputText(props: InputProps){
+export default function InputText({icon, placeholderText, ...rest}: InputProps){
     return(
         <View style={styles.containerInput}>
-            <MaterialIcons name={props.icon} size={20} color={colors.darkAquaGrenn} style={styles.icon}/>
+            <MaterialIcons name={icon} size={20} color={colors.darkAquaGrenn} style={styles.icon}/>
             <TextInput 
-                placeholder={props.placeholderText}
+                placeholder={placeholderText}
                 placeholderTextColor={colors.white}
                 cursorColor={colors.lightOrange}
                 style={styles.input}
+                {...rest}
             />
         </View>
     )
