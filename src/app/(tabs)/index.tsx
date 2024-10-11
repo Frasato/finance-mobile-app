@@ -17,7 +17,7 @@ export default function Login(){
         <View style={styles.homeContainer}>
             <Image source={require('../../assets/login.png')} style={styles.imageLogin}/>
             <InputText icon="email" placeholderText="financeapp@email.com"/>
-            <InputText icon="lock" placeholderText="Password"/>
+            <InputText icon="lock" placeholderText="Password" secureTextEntry/>
             <Button color={colors.lightAquaGreen} label="Login"/>
             <TextButton label="Register" onPress={registerRedirect}/>
         </View>
