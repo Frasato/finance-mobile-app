@@ -9,7 +9,7 @@ export default function Login(){
             <Image source={require('../../assets/login.png')} style={styles.imageLogin}/>
             <InputText icon="email" placeholderText="financeapp@email.com"/>
             <InputText icon="lock" placeholderText="Senha"/>
-            <Button />
+            <Button color={colors.lightAquaGreen} label="Login"/>
         </View>
     )
 }
