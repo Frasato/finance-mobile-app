@@ -1,10 +1,11 @@
 import { Text, View, StyleSheet } from "react-native";
 import * as colors from "../../constants/colors";
+import InputText from "@/src/components/input";
 
-export default function Home(){
+export default function Login(){
     return(
         <View style={styles.homeContainer}>
-            <Text>Home</Text>
+            <InputText />
         </View>
     )
 }
