@@ -2,6 +2,7 @@ import { View, StyleSheet, Image } from "react-native";
 import * as colors from "../../constants/colors";
 import InputText from "@/src/components/input";
 import Button from "@/src/components/button";
+import TextButton from "@/src/components/textButton";
 
 export default function Login(){
     return(
@@ -10,6 +11,7 @@ export default function Login(){
             <InputText icon="email" placeholderText="financeapp@email.com"/>
             <InputText icon="lock" placeholderText="Senha"/>
             <Button color={colors.lightAquaGreen} label="Login"/>
+            <TextButton label="Register"/>
         </View>
     )
 }
