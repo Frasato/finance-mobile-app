@@ -10,7 +10,7 @@ export default function TabsLayouts(){
                 tabBarStyle: {
                     backgroundColor: colors.darkBlue,
                     borderTopWidth: 0,
-                    display: route.name === "index"? 'none' : 'flex',
+                    display: route.name === "index" || "register" ? 'none' : 'flex',
                 },
                 tabBarActiveTintColor: colors.lightOrange,
                 tabBarInactiveTintColor: colors.darkOrange,
@@ -18,6 +18,7 @@ export default function TabsLayouts(){
             })}
         >
             <Tabs.Screen name="index" options={{href: null}}/>
+            <Tabs.Screen name="register" options={{href: null}}/>
         </Tabs>
     )
 }
