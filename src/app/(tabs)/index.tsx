@@ -1,10 +1,11 @@
-import { Text, View, StyleSheet } from "react-native";
+import { View, StyleSheet, Image } from "react-native";
 import * as colors from "../../constants/colors";
 import InputText from "@/src/components/input";
 
 export default function Login(){
     return(
         <View style={styles.homeContainer}>
+            <Image source={require('../../assets/login.png')} style={styles.imageLogin}/>
             <InputText />
         </View>
     )
@@ -16,5 +17,9 @@ const styles = StyleSheet.create({
         backgroundColor: colors.deepDarkBlue,
         justifyContent: "center",
         alignItems: "center"
+    },
+    imageLogin: {
+        width: 105 * 2.4,
+        height: 82 * 2.4
     }
 })
