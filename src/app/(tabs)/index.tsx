@@ -6,7 +6,7 @@ export default function Login(){
     return(
         <View style={styles.homeContainer}>
             <Image source={require('../../assets/login.png')} style={styles.imageLogin}/>
-            <InputText />
+            <InputText icon="email" placeholderText="financeapp@email.com"/>
         </View>
     )
 }
