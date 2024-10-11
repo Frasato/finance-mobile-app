@@ -7,6 +7,7 @@ export default function Login(){
         <View style={styles.homeContainer}>
             <Image source={require('../../assets/login.png')} style={styles.imageLogin}/>
             <InputText icon="email" placeholderText="financeapp@email.com"/>
+            <InputText icon="lock" placeholderText="Senha"/>
         </View>
     )
 }
@@ -20,6 +21,7 @@ const styles = StyleSheet.create({
     },
     imageLogin: {
         width: 105 * 2.4,
-        height: 82 * 2.4
+        height: 82 * 2.4,
+        marginBottom: 20
     }
-})
+});
