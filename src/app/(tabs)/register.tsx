@@ -18,7 +18,7 @@ export default function Register(){
             <Image source={require('../../assets/register.png')} style={styles.image}/>
             <InputText icon="person" placeholderText="Your Username"/>
             <InputText icon="email" placeholderText="youremail@email.com"/>
-            <InputText icon="lock" placeholderText="Set a password"/>
+            <InputText icon="lock" placeholderText="Set a password" secureTextEntry/>
             <Button label="Register" color={colors.lightAquaGreen}/>
             <TextButton label="Already have an account?" onPress={redirectLogin}/>
         </View>
