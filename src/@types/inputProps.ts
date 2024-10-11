@@ -1,6 +1,7 @@
 import { IconNameProps } from "./iconNameProps";
 
-export type InputProps = {
+export interface InputProps {
     placeholderText: string,
     icon: IconNameProps,
+    secureTextEntry?: boolean
 }
