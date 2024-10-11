@@ -4,7 +4,7 @@ import * as colors from "../constants/colors";
 
 export default function TextButton(props: TextButtonProps){
     return(
-        <TouchableOpacity>
+        <TouchableOpacity onPress={props.onPress}>
             <Text style={styles.text}>{props.label}</Text>
         </TouchableOpacity>
     )
