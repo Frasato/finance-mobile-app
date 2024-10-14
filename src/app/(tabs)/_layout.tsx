@@ -17,8 +17,6 @@ export default function TabsLayouts(){
                 tabBarShowLabel: false
             })}
         >
-            <Tabs.Screen name="index" options={{tabBarStyle: {display: 'none'}}}/>
-            <Tabs.Screen name="register" options={{tabBarStyle: {display: 'none'}}}/>
             <Tabs.Screen name="home" options={{tabBarStyle: {display: 'flex'}}}/>
         </Tabs>
     )
