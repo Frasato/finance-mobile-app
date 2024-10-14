@@ -1,6 +1,7 @@
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, Text } from "react-native";
 import * as colors from "../../constants/colors";
 import MoneyInfo from "@/src/components/moneyInfo";
+import LastOperation from "@/src/components/lastOperation";
 
 export default function Home(){
     return(
@@ -8,6 +9,10 @@ export default function Home(){
             <MoneyInfo label="Entries" value={1300.00} valueColor={colors.white} icon="attach-money"/>
             <MoneyInfo label="Out's" value={100.00} valueColor={colors.red} icon="output"/>
             <MoneyInfo label="Credit" value={50.00} valueColor={colors.lightOrange} icon="credit-card"/>
+            <View>
+                <Text>Last Operation</Text>
+                <LastOperation />
+            </View>
         </View>
     )
 }
