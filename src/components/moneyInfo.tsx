@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1,
         borderStyle: 'solid',
         borderBottomColor: colors.grey,
+        marginBottom: 30,
     },
     titleContainer: {
         flexDirection: 'row',
