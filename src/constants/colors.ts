@@ -5,7 +5,6 @@ const darkAquaGrenn: string = "#03A696";
 const lightAquaGreen: string = "#04BF9D";
 const lightOrange: string = "#F27457";
 const darkOrange: string = "#BF665E";
-const red: string = "#D92525";
 const grey: string = "#BFBFBF";
 
 export {
@@ -16,6 +15,5 @@ export {
     lightAquaGreen,
     lightOrange,
     darkOrange,
-    red,
     grey,
 }
