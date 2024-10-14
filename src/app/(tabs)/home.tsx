@@ -15,6 +15,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: colors.deepDarkBlue
+        backgroundColor: colors.deepDarkBlue,
+        paddingHorizontal: 15,
     },
 })
