@@ -19,9 +19,15 @@ export default function TabsLayouts(){
         >
             <Tabs.Screen name="index" options={{
                 href: null,
+                tabBarStyle: {
+                    display: 'none',
+                }
             }} />
             <Tabs.Screen name="register" options={{
                 href: null,
+                tabBarStyle: {
+                    display: 'none',
+                }
             }} />
             <Tabs.Screen name="home" options={{
                 tabBarIcon: ({size, color}) => {
