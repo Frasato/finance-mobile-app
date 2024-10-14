@@ -15,7 +15,7 @@ export default function LastOperation(){
             </View>
             <View style={styles.infosContainer}>
                 <MaterialIcons name="attach-money" size={20} color={colors.white} />
-                <Text style={styles.text}>50</Text>
+                <Text style={styles.text}>50,00</Text>
             </View>
         </View>
     )
@@ -24,11 +24,10 @@ export default function LastOperation(){
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
-        padding: 10,
-        backgroundColor: colors.darkBlue,
     },
     infosContainer: {
-        flexDirection: 'row'
+        flexDirection: 'row',
+        marginRight: 20
     },
     text: {
         color: colors.white
