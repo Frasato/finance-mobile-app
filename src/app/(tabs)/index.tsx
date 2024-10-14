@@ -13,7 +13,7 @@ export default function Login(){
     const [password, setPassword] = useState<string>('');
 
     const registerRedirect = () =>{
-        router.push("/register");
+        router.replace("/register");
     }
 
     const handlerEmail = (text: string) =>{
