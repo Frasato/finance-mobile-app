@@ -4,22 +4,34 @@ import InputText from "@/src/components/input";
 import Button from "@/src/components/button";
 import TextButton from "@/src/components/textButton";
 import { useRouter } from "expo-router";
+import { useState } from "react";
 
 export default function Register(){
 
     const router = useRouter();
+    const [username, setUsername] = useState<string>('');
+    const [email, setEmail] = useState<string>('');
+    const [password, setPassword] = useState<string>('');
 
     const redirectLogin = () =>{
-        router.back();
+        router.replace("/(tabs)/");
+    }
+
+    const handlerUsername = (text: string) => setUsername(text);
+    const handlerEmail = (text: string) => setEmail(text);
+    const handlerPassword = (text: string) => setPassword(text);
+
+    const handlerRegister = () =>{
+
     }
 
     return(
         <View style={styles.registerContainer}>
             <Image source={require('../../assets/register.png')} style={styles.image}/>
-            <InputText icon="person" placeholderText="Your Username"/>
-            <InputText icon="email" placeholderText="youremail@email.com"/>
-            <InputText icon="lock" placeholderText="Set a password" secureTextEntry/>
-            <Button label="Register" color={colors.lightAquaGreen}/>
+            <InputText icon="person" placeholderText="Your Username" onChangeText={(text) => handlerUsername(text)}/>
+            <InputText icon="email" placeholderText="youremail@email.com" onChangeText={(text) => handlerEmail(text)}/>
+            <InputText icon="lock" placeholderText="Set a password" secureTextEntry onChangeText={(text) => handlerPassword(text)}/>
+            <Button label="Register" color={colors.lightAquaGreen} onPress={handlerRegister}/>
             <TextButton label="Already have an account?" onPress={redirectLogin}/>
         </View>
     )
