@@ -10,7 +10,7 @@ export default function Home(){
             <MoneyInfo label="Out's" value={100.00} valueColor={colors.red} icon="output"/>
             <MoneyInfo label="Credit" value={50.00} valueColor={colors.lightOrange} icon="credit-card"/>
             <View>
-                <Text style={{color: colors.grey, fontSize: 20, marginBottom: 20}}>Last Operation:</Text>
+                <Text style={{color: colors.grey, fontSize: 20, marginBottom: 20, marginTop: 30}}>Last Operation:</Text>
                 <LastOperation />
             </View>
         </View>
