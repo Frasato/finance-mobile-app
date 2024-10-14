@@ -3,6 +3,7 @@ import * as colors from "../../constants/colors";
 import MoneyInfo from "@/src/components/moneyInfo";
 import LastOperation from "@/src/components/lastOperation";
 import Card from "@/src/components/card";
+import PromotionCard from "@/src/components/promotionCard";
 
 export default function Home(){
     return(
@@ -14,6 +15,7 @@ export default function Home(){
                 <Text style={{color: colors.grey, fontSize: 20, marginBottom: 20, marginTop: 30}}>Last Operation:</Text>
                 <LastOperation />
             </View>
+            <PromotionCard />
             <View style={{marginTop: 10}}>
                 <Text style={{color: colors.grey, fontSize: 20, marginBottom: 20, marginTop: 20}}>Promotions:</Text>
                 <View style={{flexDirection: 'row'}}>
