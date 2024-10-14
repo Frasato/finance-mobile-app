@@ -5,7 +5,9 @@ import * as colors from "../constants/colors";
 export default function MoneyInfo(props: MoneyInfosProps){
     return(
         <View style={styles.moneyContainer}>
-            <Text style={{color: colors.white, fontSize: 20}}>{props.label}:</Text>
+            <View>
+                <Text style={{color: colors.white, fontSize: 20}}>{props.label}:</Text>
+            </View>
             <Text style={{color: props.valueColor, fontSize: 30, fontWeight: 'bold'}}>R${props.value}</Text>
         </View>
     );
@@ -18,6 +20,6 @@ const styles = StyleSheet.create({
         width: '100%',
         borderBottomWidth: 1,
         borderStyle: 'solid',
-        borderBottomColor: colors.white,
+        borderBottomColor: colors.grey,
     }
 })
