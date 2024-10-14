@@ -22,7 +22,11 @@ export default function Register(){
     const handlerPassword = (text: string) => setPassword(text);
 
     const handlerRegister = () =>{
-
+        if(username != '' && email != '' && password != ''){
+            router.replace("/(tabs)/home");
+        }else{
+            return;
+        }
     }
 
     return(
