@@ -1,10 +1,11 @@
-import { Text, View, StyleSheet } from "react-native";
+import { View, StyleSheet } from "react-native";
 import * as colors from "../../constants/colors";
+import MoneyInfo from "@/src/components/moneyInfo";
 
 export default function Home(){
     return(
         <View style={styles.homeContainer}>
-            <Text style={{color: 'white'}}>Home</Text>
+            <MoneyInfo label="Entries" value={1300.00} valueColor={colors.white}/>
         </View>
     )
 }
