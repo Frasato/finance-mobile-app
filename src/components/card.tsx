@@ -4,7 +4,10 @@ import CardItem from "./cardItem";
 
 export default function Card(){
     return(
-        <ScrollView>
+        <ScrollView horizontal={true} style={{marginBottom: 10}}>
+            <CardItem />
+            <CardItem />
+            <CardItem />
             <CardItem />
         </ScrollView>
     )
