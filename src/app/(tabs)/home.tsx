@@ -14,8 +14,11 @@ export default function Home(){
                 <Text style={{color: colors.grey, fontSize: 20, marginBottom: 20, marginTop: 30}}>Last Operation:</Text>
                 <LastOperation />
             </View>
-            <View style={{flexDirection: 'row'}}>
-                <Card />
+            <View style={{marginTop: 10}}>
+                <Text style={{color: colors.grey, fontSize: 20, marginBottom: 20, marginTop: 20}}>Promotions:</Text>
+                <View style={{flexDirection: 'row'}}>
+                    <Card />
+                </View>
             </View>
         </View>
     )
