@@ -2,6 +2,7 @@ import { View, StyleSheet, Text } from "react-native";
 import * as colors from "../../constants/colors";
 import MoneyInfo from "@/src/components/moneyInfo";
 import LastOperation from "@/src/components/lastOperation";
+import Card from "@/src/components/card";
 
 export default function Home(){
     return(
@@ -12,6 +13,9 @@ export default function Home(){
             <View>
                 <Text style={{color: colors.grey, fontSize: 20, marginBottom: 20, marginTop: 30}}>Last Operation:</Text>
                 <LastOperation />
+            </View>
+            <View style={{flexDirection: 'row'}}>
+                <Card />
             </View>
         </View>
     )
