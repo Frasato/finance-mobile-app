@@ -16,8 +16,9 @@ export default function Home(){
                     <MoneyInfo label="Credit" value={50.00} valueColor={colors.grey} icon="credit-card"/>
                 </View>
                 <View>
-                    <Text style={{color: colors.grey, fontSize: 20, marginBottom: 20, marginTop: 30}}>Last Operation:</Text>
-                    <LastOperation value={300} date="10/10/2024" category="Computer Screen" icon="arrow-back-ios" />
+                    <Text style={{color: colors.grey, fontSize: 20, marginBottom: 10, marginTop: 30}}>Last Operation:</Text>
+                    <LastOperation value={300} date="10/10/2024" category="Computer Screen" icon="arrow-back" />
+                    <LastOperation value={1000} date="05/10/2024" category="Pay-day" icon="arrow-forward" />
                 </View>
                 <PromotionCard />
                 <View style={{marginTop: 10}}>
