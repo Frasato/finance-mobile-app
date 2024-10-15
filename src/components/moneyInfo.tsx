@@ -10,7 +10,7 @@ export default function MoneyInfo(props: MoneyInfosProps){
                 <MaterialIcons name={props.icon} size={25} color={colors.grey}/>
                 <Text style={{color: colors.white, fontSize: 20}}>{props.label}:</Text>
             </View>
-            <Text style={{color: props.valueColor, fontSize: 30, fontWeight: 'bold'}}>R${props.value}</Text>
+            <Text style={{color: props.valueColor, fontSize: 30, fontWeight: 'bold'}}>${props.value}</Text>
         </View>
     );
 }
