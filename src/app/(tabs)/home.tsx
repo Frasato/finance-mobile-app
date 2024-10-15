@@ -10,9 +10,11 @@ export default function Home(){
     return(
         <ScrollView showsVerticalScrollIndicator={false}>
             <View style={styles.homeContainer}>
-                <MoneyInfo label="Entries" value={1300.00} valueColor={colors.lightAquaGreen} icon="attach-money"/>
-                <MoneyInfo label="Out's" value={100.00} valueColor={colors.white} icon="output"/>
-                <MoneyInfo label="Credit" value={50.00} valueColor={colors.grey} icon="credit-card"/>
+                <View style={styles.moneyContainer}>
+                    <MoneyInfo label="Entries" value={1300.00} valueColor={colors.lightAquaGreen} icon="attach-money"/>
+                    <MoneyInfo label="Out's" value={100.00} valueColor={colors.white} icon="output"/>
+                    <MoneyInfo label="Credit" value={50.00} valueColor={colors.grey} icon="credit-card"/>
+                </View>
                 <View>
                     <Text style={{color: colors.grey, fontSize: 20, marginBottom: 20, marginTop: 30}}>Last Operation:</Text>
                     <LastOperation />
@@ -37,4 +39,8 @@ const styles = StyleSheet.create({
         backgroundColor: colors.deepDarkBlue,
         paddingHorizontal: 15,
     },
+    moneyContainer: {
+        width: '100%',
+        marginTop: 60,
+    }
 })
