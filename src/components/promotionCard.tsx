@@ -9,9 +9,9 @@ export default function PromotionCard(){
             <View style={styles.contentContainer}>
                 <View style={styles.titleContainer}>
                     <MaterialIcons name="attach-money" size={30} color={colors.white}/>
-                    <Text>Loan available</Text>
+                    <Text style={styles.titleText}>Loan available</Text>
                 </View>
-                <Text>$1700</Text>
+                <Text style={styles.valueText}>$1700</Text>
             </View>
         </View>
     )
@@ -19,6 +19,7 @@ export default function PromotionCard(){
 
 const styles = StyleSheet.create({
     container: {
+        marginTop: 20,
         backgroundColor: colors.lightOrange,
         borderRadius: 10,
     },
@@ -30,11 +31,20 @@ const styles = StyleSheet.create({
     contentContainer: {
         flexDirection: 'row',
         alignContent: 'center',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        padding: 10,
     },
     titleContainer: {
         flexDirection: 'row',
-        alignContent: 'center',
-        justifyContent: 'center'
+        alignItems: 'center'
+    },
+    titleText: {
+        color: colors.white,
+        fontSize: 15
+    },
+    valueText: {
+        color: colors.white,
+        fontSize: 20,
+        fontWeight: 'bold'
     }
 })
