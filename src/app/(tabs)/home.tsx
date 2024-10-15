@@ -17,7 +17,7 @@ export default function Home(){
                 </View>
                 <View>
                     <Text style={{color: colors.grey, fontSize: 20, marginBottom: 20, marginTop: 30}}>Last Operation:</Text>
-                    <LastOperation />
+                    <LastOperation value={300} date="10/10/2024" category="Computer Screen" icon="arrow-back-ios" />
                 </View>
                 <PromotionCard />
                 <View style={{marginTop: 10}}>
