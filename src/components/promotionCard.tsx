@@ -19,7 +19,7 @@ export default function PromotionCard(){
 
 const styles = StyleSheet.create({
     container: {
-        marginTop: 20,
+        marginTop: 40,
         backgroundColor: colors.lightOrange,
         borderRadius: 10,
     },
