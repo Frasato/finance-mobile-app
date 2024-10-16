@@ -27,20 +27,22 @@ export default function Entries(){
 
     return(
         <View>
-            <InputText icon="attach-money" placeholderText="Value" onChangeText={(text) => handlerValue(text)}/>
-            <DropdownSelect 
-                label="Entries..."
-                placeholder="Select a category..."
-                options={[
-                    {title: 'Pay-day', data: 'pay-day'},
-                    {title: 'Sell', data: 'sell'},
-                    {title: 'Other', data: 'other'},
-                ]}
-                selectedValue={category}
-                onValueChange={(text) => handlerCategory(text)}
-                primaryColor={colors.darkBlue}
-            />
-            <Button label="Add Entries" color={colors.lightAquaGreen} onPress={handlerEntries}/>
+            <View>
+                <InputText icon="attach-money" placeholderText="Value" onChangeText={(text) => handlerValue(text)}/>
+                <DropdownSelect 
+                    label="Entries..."
+                    placeholder="Select a category..."
+                    options={[
+                        {title: 'Pay-day', data: 'pay-day'},
+                        {title: 'Sell', data: 'sell'},
+                        {title: 'Other', data: 'other'},
+                    ]}
+                    selectedValue={category}
+                    onValueChange={(text) => handlerCategory(text)}
+                    primaryColor={colors.darkBlue}
+                />
+                <Button label="Add Entries" color={colors.lightAquaGreen} onPress={handlerEntries}/>
+            </View>
         </View>
     )
 }
