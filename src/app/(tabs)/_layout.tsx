@@ -34,6 +34,11 @@ export default function TabsLayouts(){
                     return <MaterialIcons name="home" size={size} color={color} />
                 },
             }}/>
+            <Tabs.Screen name="entries" options={{
+                tabBarIcon: ({size, color}) => {
+                    return <MaterialIcons name="attach-money" size={size} color={color} />
+                },
+            }}/>
         </Tabs>
     )
 }
