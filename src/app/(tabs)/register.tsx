@@ -24,8 +24,6 @@ export default function Register(){
     const handlerRegister = () =>{
         if(username != '' && email != '' && password != ''){
             router.replace("/(tabs)/home");
-        }else{
-            return;
         }
     }
 
