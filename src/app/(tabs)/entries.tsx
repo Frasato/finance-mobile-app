@@ -3,11 +3,14 @@ import { useState } from "react";
 import { View } from "react-native";
 import DropdownSelect from "react-native-input-select";
 import * as colors from "../../constants/colors";
+import Button from "@/src/components/button";
+import { useRouter } from "expo-router";
 
 export default function Entries(){
 
     const [value, setValue] = useState<number>(0);
     const [category, setCategory] = useState<string>('');
+    const router = useRouter();
 
     const handlerValue = (text: string) => {
         const valueNumber: number = Number(text);
@@ -15,6 +18,12 @@ export default function Entries(){
     }
 
     const handlerCategory = (text: any) => setCategory(text);
+
+    const handlerEntries = () => {
+        if(value != 0 && category != ''){
+            router.replace("/(tabs)/home");
+        }
+    }
 
     return(
         <View>
@@ -31,6 +40,7 @@ export default function Entries(){
                 onValueChange={(text) => handlerCategory(text)}
                 primaryColor={colors.darkBlue}
             />
+            <Button label="Add Entries" color={colors.lightAquaGreen} onPress={handlerEntries}/>
         </View>
     )
 }
