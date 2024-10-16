@@ -1,6 +1,6 @@
 import InputText from "@/src/components/input";
 import { useState } from "react";
-import { View } from "react-native";
+import { View, StyleSheet } from "react-native";
 import DropdownSelect from "react-native-input-select";
 import * as colors from "../../constants/colors";
 import Button from "@/src/components/button";
@@ -46,3 +46,8 @@ export default function Entries(){
         </View>
     )
 }
+
+const styles = StyleSheet.create({
+    container: {},
+    formContainer: {},
+});
