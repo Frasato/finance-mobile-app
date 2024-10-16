@@ -39,6 +39,11 @@ export default function TabsLayouts(){
                     return <MaterialIcons name="attach-money" size={size} color={color} />
                 },
             }}/>
+            <Tabs.Screen name="outs" options={{
+                tabBarIcon: ({size, color}) => {
+                    return <MaterialIcons name="outbox" size={size} color={color} />
+                },
+            }}/>
         </Tabs>
     )
 }
