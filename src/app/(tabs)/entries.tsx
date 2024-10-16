@@ -1,6 +1,8 @@
 import InputText from "@/src/components/input";
 import { useState } from "react";
 import { View } from "react-native";
+import DropdownSelect from "react-native-input-select";
+import * as colors from "../../constants/colors";
 
 export default function Entries(){
 
@@ -14,6 +16,7 @@ export default function Entries(){
     return(
         <View>
             <InputText icon="attach-money" placeholderText="Value" onChangeText={(text) => handlerValue(text)}/>
+            <DropdownSelect label="" placeholder="" options={[]} selectedValue={} onValueChange={} primaryColor={colors.darkBlue}/>
         </View>
     )
 }
