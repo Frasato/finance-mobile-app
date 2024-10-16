@@ -26,8 +26,7 @@ export default function Entries(){
     }
 
     return(
-        <View>
-            <View>
+        <View style={styles.container}>
                 <InputText icon="attach-money" placeholderText="Value" onChangeText={(text) => handlerValue(text)}/>
                 <DropdownSelect 
                     label="Entries..."
@@ -42,12 +41,14 @@ export default function Entries(){
                     primaryColor={colors.darkBlue}
                 />
                 <Button label="Add Entries" color={colors.lightAquaGreen} onPress={handlerEntries}/>
-            </View>
         </View>
     )
 }
 
 const styles = StyleSheet.create({
-    container: {},
-    formContainer: {},
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
+    }
 });
