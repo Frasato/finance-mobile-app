@@ -5,6 +5,7 @@ import DropdownSelect from "react-native-input-select";
 import * as colors from "../../constants/colors";
 import Button from "@/src/components/button";
 import { useRouter } from "expo-router";
+import { MaterialIcons } from "@expo/vector-icons";
 
 export default function Entries(){
 
@@ -28,17 +29,24 @@ export default function Entries(){
     return(
         <View style={styles.container}>
                 <InputText icon="attach-money" placeholderText="Value" onChangeText={(text) => handlerValue(text)}/>
-                <DropdownSelect 
-                    label="Entries..."
+                <DropdownSelect
+                    dropdownContainerStyle={{paddingHorizontal: 27}}
+                    dropdownStyle={styles.inDropDown}
+                    placeholderStyle={{color: colors.white}}
+                    selectedItemStyle={{color: colors.white}}
+                    autoCloseOnSelect={true}
+                    dropdownIcon={
+                        <MaterialIcons name="keyboard-arrow-down" size={15} color={colors.white}/>
+                    }
                     placeholder="Select a category..."
                     options={[
-                        {title: 'Pay-day', data: 'pay-day'},
-                        {title: 'Sell', data: 'sell'},
-                        {title: 'Other', data: 'other'},
+                        {label: 'Pay-day', value: 'pay-day'},
+                        {label: 'Sell', value: 'sell'},
+                        {label: 'Other', value: 'other'},
                     ]}
                     selectedValue={category}
                     onValueChange={(text) => handlerCategory(text)}
-                    primaryColor={colors.darkBlue}
+                    primaryColor={colors.white}
                 />
                 <Button label="Add Entries" color={colors.lightAquaGreen} onPress={handlerEntries}/>
         </View>
@@ -47,8 +55,13 @@ export default function Entries(){
 
 const styles = StyleSheet.create({
     container: {
+        backgroundColor: colors.deepDarkBlue,
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center'
-    }
+    },
+    inDropDown: {
+        backgroundColor: colors.deepDarkBlue,
+        borderColor: colors.white
+    },
 });
