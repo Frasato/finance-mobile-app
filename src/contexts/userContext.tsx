@@ -1,21 +1,28 @@
 import React, { createContext, ReactNode, useState } from "react";
 
 const User = createContext<{
-    username: string;
-    setUsername: React.Dispatch<React.SetStateAction<string>>;
+    usernameContext: string;
+    setUsernameContext: React.Dispatch<React.SetStateAction<string>>;
+    userEmail: string,
+    setUserEmail: React.Dispatch<React.SetStateAction<string>>;
 }>({
-    username: '',
-    setUsername: () => {},
+    usernameContext: '',
+    setUsernameContext: () => {},
+    userEmail: '',
+    setUserEmail: () => {},
 });
 
 const UserProvider = ({children} : {children: ReactNode}) =>{
     
-    const [username, setUsername] = useState<string>('');
+    const [usernameContext, setUsernameContext] = useState<string>('');
+    const [userEmail, setUserEmail] = useState<string>('');
     
     return(
         <User.Provider value={{
-            username,
-            setUsername
+            usernameContext,
+            setUsernameContext,
+            userEmail,
+            setUserEmail,
         }}>
             {children}
         </User.Provider>
