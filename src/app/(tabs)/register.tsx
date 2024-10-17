@@ -4,11 +4,13 @@ import InputText from "@/src/components/input";
 import Button from "@/src/components/button";
 import TextButton from "@/src/components/textButton";
 import { useRouter } from "expo-router";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { User } from "@/src/contexts/userContext";
 
 export default function Register(){
 
     const router = useRouter();
+    const {setUserEmail, setUsernameContext} = useContext(User);
     const [username, setUsername] = useState<string>('');
     const [email, setEmail] = useState<string>('');
     const [password, setPassword] = useState<string>('');
@@ -23,6 +25,8 @@ export default function Register(){
 
     const handlerRegister = () =>{
         if(username != '' && email != '' && password != ''){
+            setUserEmail(email);
+            setUsernameContext(username);
             router.replace("/(tabs)/home");
         }
     }
