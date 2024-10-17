@@ -9,9 +9,9 @@ import Welcome from "@/src/components/welcome";
 
 export default function Home(){
     return(
-        <ScrollView showsVerticalScrollIndicator={false}>
+        <ScrollView showsVerticalScrollIndicator={false} style={{backgroundColor: colors.deepDarkBlue}}>
+            <Welcome />
             <View style={styles.homeContainer}>
-                <Welcome />
                 <View style={styles.moneyContainer}>
                     <MoneyInfo label="Entries" value={1300.00} valueColor={colors.lightAquaGreen} icon="attach-money"/>
                     <MoneyInfo label="Out's" value={100.00} valueColor={colors.white} icon="output"/>
@@ -44,6 +44,6 @@ const styles = StyleSheet.create({
     },
     moneyContainer: {
         width: '100%',
-        marginTop: 60,
+        marginTop: 30,
     }
 })
