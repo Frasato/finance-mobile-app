@@ -1,10 +1,14 @@
+import { useContext } from "react";
 import { Text, View } from "react-native";
-import { WelcomeProps } from "../@types/welcomeProps";
+import { User } from "../contexts/userContext";
 
-export default function Welcome(props: WelcomeProps){
+export default function Welcome(){
+
+    const {username} = useContext(User);
+
     return(
         <View>
-            <Text>{props.username}</Text>
+            <Text>{username}</Text>
         </View>
     )
 }
