@@ -44,6 +44,11 @@ export default function TabsLayouts(){
                     return <MaterialIcons name="outbox" size={size} color={color} />
                 },
             }}/>
+            <Tabs.Screen name="logout" options={{
+                tabBarIcon: ({size, color}) => {
+                    return <MaterialIcons name="person-off" size={size} color={color} />
+                }
+            }}/>
         </Tabs>
     )
 }
