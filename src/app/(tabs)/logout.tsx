@@ -19,7 +19,7 @@ export default function Logout(){
     return(
         <View style={styles.container}>
             <Image source={require("../../assets/logout.png")} style={{width: 200, height: 200}}/>
-            <Text style={styles.text}>Are you sure you whant to log out?</Text>
+            <Text style={styles.text}>Are you sure you want to log out?</Text>
             <Button color={colors.lightOrange} label="LogOut" onPress={handlerLogout}/>
         </View>
     )
