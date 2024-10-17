@@ -1,10 +1,11 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, View } from "react-native";
 import * as colors from "../../constants/colors";
 import Button from "@/src/components/button";
 
 export default function Logout(){
     return(
         <View style={styles.container}>
+            <Image source={require("../../assets/logout.png")} style={{width: 200, height: 200}}/>
             <Text style={styles.text}>Are you sure you whant to log out?</Text>
             <Button color={colors.lightOrange} label="LogOut" onPress={()=>{}}/>
         </View>
@@ -23,6 +24,6 @@ const styles = StyleSheet.create({
         color: colors.white,
         fontSize: 15,
         fontWeight: '400',
-        marginBottom: 20,
+        marginVertical: 20,
     }
 })
