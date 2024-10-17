@@ -3,6 +3,7 @@ import { StyleSheet, View } from "react-native";
 import * as colors from "../../constants/colors";
 import DropdownSelect from "react-native-input-select";
 import { MaterialIcons } from "@expo/vector-icons";
+import Button from "@/src/components/button";
 
 export default function Outs(){
     return(
@@ -31,6 +32,7 @@ export default function Outs(){
                     onValueChange={(text) => {}}
                     primaryColor={colors.white}
                 />
+                <Button color={colors.lightAquaGreen} label="Take Out" onPress={()=>{}}/>
         </View>
     )
 }
