@@ -5,11 +5,13 @@ import LastOperation from "@/src/components/lastOperation";
 import Card from "@/src/components/card";
 import PromotionCard from "@/src/components/promotionCard";
 import { ScrollView } from "react-native-gesture-handler";
+import Welcome from "@/src/components/welcome";
 
 export default function Home(){
     return(
         <ScrollView showsVerticalScrollIndicator={false}>
             <View style={styles.homeContainer}>
+                <Welcome username="Gabriel"/>
                 <View style={styles.moneyContainer}>
                     <MoneyInfo label="Entries" value={1300.00} valueColor={colors.lightAquaGreen} icon="attach-money"/>
                     <MoneyInfo label="Out's" value={100.00} valueColor={colors.white} icon="output"/>
