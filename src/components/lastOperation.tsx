@@ -25,6 +25,8 @@ export default function LastOperation({category, date, value, icon}: lastOperati
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
         marginTop: 10
     },
     infosContainer: {
