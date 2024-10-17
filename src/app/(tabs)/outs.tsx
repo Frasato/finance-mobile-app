@@ -18,6 +18,12 @@ export default function Outs(){
     const handlerForWhat = (text: string) => setForWhat(text);
     const handlerCategory = (selectedCategory: any) => setCategory(selectedCategory);
 
+    const handlerTakeOut = () =>{
+        if(category != undefined && forWhat != '' && value != 0){
+            router.replace("/(tabs)/home");
+        }
+    }
+
     return(
         <View style={styles.container}>
             <InputText icon="money-off" placeholderText="Money out value..." onChangeText={(value)=> handlerValue(value)}/>
@@ -44,7 +50,7 @@ export default function Outs(){
                     onValueChange={(text) => handlerCategory(text)}
                     primaryColor={colors.white}
                 />
-                <Button color={colors.lightAquaGreen} label="Take Out" onPress={()=>{}}/>
+                <Button color={colors.lightAquaGreen} label="Take Out" onPress={handlerTakeOut}/>
         </View>
     )
 }
