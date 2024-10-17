@@ -4,8 +4,16 @@ import * as colors from "../../constants/colors";
 import DropdownSelect from "react-native-input-select";
 import { MaterialIcons } from "@expo/vector-icons";
 import Button from "@/src/components/button";
+import { useState } from "react";
+import { useRouter } from "expo-router";
 
 export default function Outs(){
+
+    const router = useRouter();
+    const [value, setValue] = useState<number>(0);
+    const [forWhat, setForWhat] = useState<string>('');
+    const [category, setCategory] = useState();
+
     return(
         <View style={styles.container}>
             <InputText icon="money-off" placeholderText="Money out value..." onChangeText={()=>{}}/>
@@ -28,7 +36,7 @@ export default function Outs(){
                         {label: 'Cats/Dogs', value: 'animals'},
                         {label: 'Others', value: 'other'},
                     ]}
-                    selectedValue={''}
+                    selectedValue={category}
                     onValueChange={(text) => {}}
                     primaryColor={colors.white}
                 />
