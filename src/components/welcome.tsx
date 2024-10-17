@@ -5,11 +5,12 @@ import * as colors from "../constants/colors";
 
 export default function Welcome(){
 
-    const {username} = useContext(User);
+    const {usernameContext, userEmail} = useContext(User);
 
     return(
         <View style={styles.container}>
-            <Text>{username}</Text>
+            <Text>{usernameContext}</Text>
+            <Text>{userEmail}</Text>
         </View>
     )
 }
@@ -20,7 +21,7 @@ const styles = StyleSheet.create({
         height: 200,
         flex: 1,
         flexDirection: 'column',
-        justifyContent: 'space-around',
+        justifyContent: 'center',
         alignItems: 'flex-start',
         padding: 20,
         borderBottomRightRadius: 40,
