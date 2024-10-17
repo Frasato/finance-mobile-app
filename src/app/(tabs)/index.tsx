@@ -4,31 +4,29 @@ import InputText from "@/src/components/input";
 import Button from "@/src/components/button";
 import TextButton from "@/src/components/textButton";
 import { useRouter } from "expo-router";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { User } from "@/src/contexts/userContext";
 
 export default function Login(){
 
+    const {setUsernameContext, setUserEmail} = useContext(User);
     const router = useRouter();
     const [email, setEmail] = useState<string>('');
     const [password, setPassword] = useState<string>('');
+    const [username, setUsername] = useState<string>('');
 
     const registerRedirect = () =>{
         router.replace("/register");
     }
 
-    const handlerEmail = (text: string) =>{
-        if(text.length > 0){
-            setEmail(text);
-        }
-    }
-    const handlerPassword = (text: string) =>{
-        if(text.length > 0){
-            setPassword(text);
-        }
-    }
+    const handlerUsername = (text: string) => setUsername(text);
+    const handlerEmail = (text: string) => setEmail(text);
+    const handlerPassword = (text: string) => setPassword(text);
 
     const handlerLogin = () =>{
-        if(email?.length > 0 && password?.length > 0){
+        if(email != '' && password != '' && username != ''){
+            setUserEmail(email);
+            setUsernameContext(username);
             router.replace("/(tabs)/home");
         }
     }
@@ -36,6 +34,7 @@ export default function Login(){
     return(
         <View style={styles.homeContainer}>
             <Image source={require('../../assets/login.png')} style={styles.imageLogin}/>
+            <InputText icon="person-3" placeholderText="Username" onChangeText={(text) => handlerUsername(text)}/>
             <InputText icon="email" placeholderText="financeapp@email.com" onChangeText={(text) => handlerEmail(text)}/>
             <InputText icon="lock" placeholderText="Password" onChangeText={(text) => handlerPassword(text)} secureTextEntry/>
             <Button color={colors.lightAquaGreen} label="Login" onPress={handlerLogin}/>
