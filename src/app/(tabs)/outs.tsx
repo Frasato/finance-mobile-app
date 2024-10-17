@@ -14,10 +14,14 @@ export default function Outs(){
     const [forWhat, setForWhat] = useState<string>('');
     const [category, setCategory] = useState();
 
+    const handlerValue = (value: string) => setValue(Number(value));
+    const handlerForWhat = (text: string) => setForWhat(text);
+    const handlerCategory = (selectedCategory: any) => setCategory(selectedCategory);
+
     return(
         <View style={styles.container}>
-            <InputText icon="money-off" placeholderText="Money out value..." onChangeText={()=>{}}/>
-            <InputText icon="question-mark" placeholderText="For what?" onChangeText={()=>{}}/>
+            <InputText icon="money-off" placeholderText="Money out value..." onChangeText={(value)=> handlerValue(value)}/>
+            <InputText icon="question-mark" placeholderText="For what?" onChangeText={(text)=> handlerForWhat(text)}/>
             <DropdownSelect
                     dropdownContainerStyle={{paddingHorizontal: 27}}
                     dropdownStyle={styles.inDropDown}
@@ -37,7 +41,7 @@ export default function Outs(){
                         {label: 'Others', value: 'other'},
                     ]}
                     selectedValue={category}
-                    onValueChange={(text) => {}}
+                    onValueChange={(text) => handlerCategory(text)}
                     primaryColor={colors.white}
                 />
                 <Button color={colors.lightAquaGreen} label="Take Out" onPress={()=>{}}/>
