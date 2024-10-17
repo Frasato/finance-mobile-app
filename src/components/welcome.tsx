@@ -28,7 +28,7 @@ export default function Welcome(){
 const styles = StyleSheet.create({
     container: {
         backgroundColor: colors.white,
-        height: 200,
+        height: 220,
         flex: 1,
         flexDirection: 'column',
         justifyContent: 'center',
