@@ -11,7 +11,7 @@ export default function Home(){
     return(
         <ScrollView showsVerticalScrollIndicator={false}>
             <View style={styles.homeContainer}>
-                <Welcome username="Gabriel"/>
+                <Welcome />
                 <View style={styles.moneyContainer}>
                     <MoneyInfo label="Entries" value={1300.00} valueColor={colors.lightAquaGreen} icon="attach-money"/>
                     <MoneyInfo label="Out's" value={100.00} valueColor={colors.white} icon="output"/>
