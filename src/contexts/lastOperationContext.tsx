@@ -1,4 +1,5 @@
 import React, { createContext, ReactNode, useState } from "react";
+import { OperationContextProps } from "../@types/operationContextProps";
 
 const OperationInfos = createContext<{
     operationCategory: any;
@@ -19,8 +20,9 @@ const OperationInfos = createContext<{
 const OperationInfosProvider = ({children} : {children: ReactNode}) =>{
     
     const [operationValue, setOperationValue] = useState<number>(0);
-    const [operationCategory, setOperationCategory] = useState();
-    const [date, setDate] = useState();
+    const [operationCategory, setOperationCategory] = useState<any>();
+    const [date, setDate] = useState<any>();
+    const [operations, setOperations] = useState<OperationContextProps[]>([]);
     
     return(
         <OperationInfos.Provider value={{
