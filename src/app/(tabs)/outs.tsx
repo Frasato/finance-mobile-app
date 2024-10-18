@@ -4,11 +4,13 @@ import * as colors from "../../constants/colors";
 import DropdownSelect from "react-native-input-select";
 import { MaterialIcons } from "@expo/vector-icons";
 import Button from "@/src/components/button";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useRouter } from "expo-router";
+import { OperationInfos } from "@/src/contexts/lastOperationContext";
 
 export default function Outs(){
 
+    const {operations, setOperations} = useContext(OperationInfos);
     const router = useRouter();
     const [value, setValue] = useState<number>(0);
     const [forWhat, setForWhat] = useState<string>('');
@@ -20,6 +22,15 @@ export default function Outs(){
 
     const handlerTakeOut = () =>{
         if(category != undefined && forWhat != '' && value != 0){
+            
+            const operationsModel = {
+                value: value,
+                category: category,
+                date: Date.now
+            }
+            
+            setOperations([operationsModel, ...operations])
+            
             router.replace("/(tabs)/home");
         }
     }
