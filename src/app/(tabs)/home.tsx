@@ -6,8 +6,13 @@ import Card from "@/src/components/card";
 import PromotionCard from "@/src/components/promotionCard";
 import { ScrollView } from "react-native-gesture-handler";
 import Welcome from "@/src/components/welcome";
+import { useContext } from "react";
+import { OperationInfos } from "@/src/contexts/lastOperationContext";
 
 export default function Home(){
+
+    const {operations} = useContext(OperationInfos);
+
     return(
         <ScrollView showsVerticalScrollIndicator={false} style={{backgroundColor: colors.deepDarkBlue}}>
             <Welcome />
@@ -19,8 +24,11 @@ export default function Home(){
                 </View>
                 <View>
                     <Text style={{color: colors.grey, fontSize: 20, marginBottom: 10, marginTop: 30}}>Last Operation:</Text>
-                    <LastOperation value={300} date="10/10/2024" category="Computer Screen" icon="arrow-back" />
-                    <LastOperation value={1000} date="05/10/2024" category="Pay-day" icon="arrow-forward" />
+                    {operations.map((item, index) => {
+                        return(
+                            <LastOperation key={index} value={item.value} date={item.date} category={item.category} icon="money" />
+                        );
+                    })}
                 </View>
                 <PromotionCard />
                 <View style={{marginTop: 10}}>
