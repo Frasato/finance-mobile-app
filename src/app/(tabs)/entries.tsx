@@ -1,14 +1,16 @@
 import InputText from "@/src/components/input";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { View, StyleSheet } from "react-native";
 import DropdownSelect from "react-native-input-select";
 import * as colors from "../../constants/colors";
 import Button from "@/src/components/button";
 import { useRouter } from "expo-router";
 import { MaterialIcons } from "@expo/vector-icons";
+import { OperationInfos } from "@/src/contexts/lastOperationContext";
 
 export default function Entries(){
 
+    const {operations, setOperations} = useContext(OperationInfos);
     const [value, setValue] = useState<number>(0);
     const [category, setCategory] = useState<string>('');
     const router = useRouter();
@@ -22,6 +24,15 @@ export default function Entries(){
 
     const handlerEntries = () => {
         if(value != 0 && category != ''){
+            
+            const operationsModel = {
+                value: value,
+                category: category,
+                date: Date.now
+            }
+            
+            setOperations([...operations, operationsModel]);
+
             router.replace("/(tabs)/home");
         }
     }
