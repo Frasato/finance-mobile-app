@@ -8,13 +8,17 @@ const OperationInfos = createContext<{
     setOperationCategory: React.Dispatch<React.SetStateAction<any>>;
     setDate: React.Dispatch<React.SetStateAction<any>>;
     setOperationValue: React.Dispatch<React.SetStateAction<number>>;
+    operations: OperationContextProps[];
+    setOperations: React.Dispatch<React.SetStateAction<OperationContextProps[]>>;
 }>({
     operationCategory: undefined,
     operationValue: 0,
     date: undefined,
+    operations: [],
     setOperationCategory: () => {},
     setDate: () => {},
-    setOperationValue: () => {}
+    setOperationValue: () => {},
+    setOperations: () => {}
 });
 
 const OperationInfosProvider = ({children} : {children: ReactNode}) =>{
@@ -32,6 +36,8 @@ const OperationInfosProvider = ({children} : {children: ReactNode}) =>{
             setOperationValue,
             date,
             setDate,
+            operations,
+            setOperations,
         }}>
             {children}
         </OperationInfos.Provider>
